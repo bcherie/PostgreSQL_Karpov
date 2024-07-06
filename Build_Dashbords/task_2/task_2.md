@@ -22,7 +22,7 @@ date, new_users, new_couriers, total_users, total_couriers, new_users_change, ne
 
 Пояснение:
 Не забывайте при делении заранее приводить значения к нужному типу данных. Пропущенные значения приростов для самой первой даты не заполняйте — просто оставьте поля в этой строке пустыми.
-
+~~~~sql
 SELECT
     date,
     new_users,
@@ -57,6 +57,7 @@ FROM   (SELECT time::date as t,
                             FROM   courier_actions) sub1
                     GROUP BY 1) c
         ON u.t = c.t) s
+ ~~~~
 
 ![test](task_2_1.png)
 
