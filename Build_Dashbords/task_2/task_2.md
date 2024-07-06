@@ -22,6 +22,8 @@ date, new_users, new_couriers, total_users, total_couriers, new_users_change, ne
 
 Пояснение:
 Не забывайте при делении заранее приводить значения к нужному типу данных. Пропущенные значения приростов для самой первой даты не заполняйте — просто оставьте поля в этой строке пустыми.
+
+## **SQL Запрос:**
 ~~~~sql
 SELECT
     date,
@@ -58,6 +60,9 @@ FROM   (SELECT time::date as t,
                     GROUP BY 1) c
         ON u.t = c.t) s
  ~~~~
+
+## **Графики:**
+Ссылка на redash http://redash.public.karpov.courses/public/dashboards/qbsQDkUe6wQTGOs4GS8k1C5Yx51jntL0kyrdvrom?org_slug=default
 
 ![test](task_2_1.png)
 
